@@ -14,7 +14,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
 from .models import CarMake, CarModel
-from .restapis import get_request, analyze_review_sentiments  #, post_review
+from .restapis import get_request, analyze_review_sentiments  # , post_review
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -42,7 +42,7 @@ def login_user(request):
 # Create a `logout_request` view to handle sign out request
 def logout_request(request):
     logout(request)  # Terminate user session
-    data = {"userName":""}  # Return empty username
+    data = {"userName": ""}  # Return empty username
     return JsonResponse(data)
 
 
